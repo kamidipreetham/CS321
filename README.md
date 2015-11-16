@@ -1,16 +1,15 @@
-####(Web Browser) View Client side application
+####Group 9 Automated Home
 Input the IP address of your board plus the port number (3000) 
 For example, http://192.168.1.0:3000
 
-Intel(R) XDK IoT Edition
--------------------------------------------
-This template is part of the Intel(R) XDK IoT Edition. 
-Download the Intel(R) XDK IoT Edition at https://software.intel.com/en-us/html5/xdk-iot. To see the technical details of the sample, 
-please visit the sample article page at https://software.intel.com/en-us/xdk/docs/intel-xdk-iot-edition-nodejs-templates.
+Interfacing Intel Galileo with Arduino Mega 2560
 
 Important App Files
 ---------------------------
 * main.js
+* index.html
+* index.js
+* index.css
 * package.json
 * icon.png
 * README.md
