@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Group 9 Home Page</title>
+    <link rel="stylesheet" href="client/index.css"/>
+    <!--    -->
+    <script src="client/jquery-1.11.1.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css"/>
+    <script src="jquery-ui.js"></script>
+    <script type="text/javascript">
+        setInterval(receive,50);
+        function receive(){
+          socket.on('readvalue',function(data){
+            if(data > 600)
+                document.getElementById('sensorvalue').innerHTML= "ON";
+              else
+                  document.getElementById('sensorvalue').innerHTML= "OFF";
+              
+          });
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="title">Group 9</div>
+
+    <div class="container">
+        <span class="sub-title">Portico Light status</span>
+        <div id="led-container" class="off"><span>OFF</span></div>
+        <div id="led-link-container"><button id="led-link">Switch ON/OFF</button></div>
+    </div>
+    
+        <span class="sub-title">Washroom Light status</span>
+        <div id="led-container1" class="off"><span>OFF</span></div>
+        <div id="led-link-container1">
+            
+            <button id="led-link1">Switch ON/OFF</button>
+        </div>
+        <div id="sensorStatus">
+                <p class="sub-title">Feedback Status</p>
+                <p class="sub-title" id='sensorvalue'>OFF</p>
+            </div>
+        
+
+    <div id="fanButton">
+	<span class="sub-title">FAN status</span>
+        <button class="fanButtons" id="fanButton0" name="0">0</button>
+        <button class="fanButtons" id="fanButton1" name="1">1</button>
+        <button class="fanButtons" id="fanButton2"  name='2'>2</button>
+        <button class="fanButtons" id="fanButton3"  name='3'>3</button>
+        <button class="fanButtons" id="fanButton4" name='4'>4</button>
+        <button class="fanButtons" id="fanButton5" name='5'>Auto</button>
+    </div>
+    
+
+    <script src="client/index.js"></script> 
+  
+    </body>
+</html>
