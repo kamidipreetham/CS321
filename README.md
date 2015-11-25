@@ -4,6 +4,8 @@ For example, http://192.168.1.0:3000
 
 Interfacing Intel Galileo with Arduino Mega 2560
 
+P.S. : Use a router with Galileo.
+
 Important App Files
 ---------------------------
 * main.js
